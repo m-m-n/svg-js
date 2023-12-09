@@ -13,7 +13,7 @@ SVG画像のsvgタグをHTMLに埋め込むようにするJavaScriptを生成す
 
 (例)
 
-```
+```bash
 curl -o resources/nogizaka46.svg "https://upload.wikimedia.org/wikipedia/commons/6/65/Nogizaka46_logo.svg"
 docker compose build && docker compose up && docker compose down
 mv build/svg.js /var/www/html/svg.js
