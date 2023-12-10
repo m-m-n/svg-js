@@ -23,7 +23,7 @@ cat > /var/www/html/index.html
     <script src="./svg.js"></script>
   </head>
   <body>
-    <div icon-data="nogizaka46"></div>
+    <div data-icon="nogizaka46"></div>
   </body>
 </html>
 ```
