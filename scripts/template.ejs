@@ -1,0 +1,18 @@
+/**
+ * SVGを埋め込むJavaScript
+ * <div data-icon="\${icons.key}"></div> のような形で利用する
+ * JavaScriptの動作としてはDOMが構築された際にdata-icon属性のある要素に対し
+ * data-iconの値を取得してiconsのキーとして存在していればiconsの内容を取得した要素の子要素として設定する
+ */
+(() => {
+  const icons = <%- icons %>;
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll("[data-icon]");
+    for (const element of elements) {
+      const icon = element.getAttribute("data-icon");
+      if (icon in icons) {
+        element.innerHTML = icons[icon];
+      }
+    }
+  });
+})();

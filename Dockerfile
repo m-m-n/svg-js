@@ -9,5 +9,7 @@ RUN apt-get update \
 COPY ./scripts /scripts
 COPY ./resources /resources
 
+WORKDIR /scripts
+
 CMD [ "/root/.deno/bin/deno", "run", "--allow-read", "--allow-write", "/scripts/index.ts" ]
 
